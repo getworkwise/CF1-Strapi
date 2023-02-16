@@ -4,7 +4,8 @@
   "info": {
     "singularName": "school",
     "pluralName": "schools",
-    "displayName": "School"
+    "displayName": "School",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -31,6 +32,16 @@
       "relation": "oneToMany",
       "target": "api::class.class",
       "mappedBy": "school"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
