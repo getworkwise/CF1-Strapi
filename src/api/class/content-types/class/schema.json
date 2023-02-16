@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "classes",
+  "info": {
+    "singularName": "class",
+    "pluralName": "classes",
+    "displayName": "Class"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "teacher": {
+      "type": "string"
+    },
+    "start_time": {
+      "type": "time"
+    },
+    "end_time": {
+      "type": "time"
+    },
+    "school": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::school.school",
+      "inversedBy": "classes"
+    }
+  }
+}

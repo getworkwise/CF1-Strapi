@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "schools",
+  "info": {
+    "singularName": "school",
+    "pluralName": "schools",
+    "displayName": "School"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "address": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "contact_info": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "classes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::class.class",
+      "mappedBy": "school"
+    }
+  }
+}
